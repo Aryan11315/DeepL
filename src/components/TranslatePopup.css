@@ -1,0 +1,397 @@
+/* === CONTAINER & HEADER === */
+.popup-container {
+  background-color: #000;
+  color: white;
+  width: 360px;
+  padding: 12px;
+  border-radius: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #555;
+  padding-bottom: 8px;
+}
+
+.popup-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.popup-title img {
+  height: 24px;
+  margin-right: 8px;
+}
+
+.back-button,
+.settings-icon {
+  background: none;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* === MODE TOGGLE === */
+.mode-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+  gap: 12px;
+}
+
+.mode-toggle button {
+  padding: 4px 8px;
+  background: #222;
+  color: white;
+  border: 1px solid white;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 12px;
+  min-width: 150px;
+  max-width: 150px;
+  height: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.mode-toggle .active {
+  background: white;
+  color: black;
+  font-weight: 600;
+}
+
+/* === LANGUAGE SELECT === */
+.language-select {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding-bottom: 4px;
+}
+
+.language-select select {
+  flex: 1;
+  padding: 8px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+/* === TEXTAREAS === */
+.translate-input,
+.translate-output {
+  background-color: #222;
+  color: white;
+  padding: 14px;
+  border-radius: 16px;
+  font-size: 16px;
+  border: none;
+  resize: none;
+  height: 110px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+  margin-bottom: 12px;
+}
+
+.translate-output[readonly] {
+  background-color: #222;
+}
+
+/* === MAGIC PEN === */
+.magicpen-view {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+}
+
+.magic-icon {
+  font-size: 24px;
+}
+
+.magic-text {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.magic-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.magic-controls select {
+  flex: 1;
+  padding: 8px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* === BUTTON === */
+.submit-btn {
+  padding: 10px 24px;
+  background-color: #444;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #6c63ff;
+  color: black;
+}
+
+/* === MAGIC OUTPUT CONTAINER === */
+.magic-output-container {
+  max-height: 50vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+
+/* Blue scrollbars */
+.magic-output-container::-webkit-scrollbar {
+  width: 8px;
+}
+.magic-output-container::-webkit-scrollbar-thumb {
+  background-color: #2196F3;
+  border-radius: 10px;
+}
+.magic-output-container::-webkit-scrollbar-track {
+  background-color: #111;
+}
+
+/* === INDIVIDUAL OUTPUT BLOCK === */
+.output-block {
+  background-color: #222;
+  color: white;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #666;
+  font-size: 16px;
+  position: relative;
+  height: 500px;
+  overflow-y: auto;
+}
+
+/* Scrollbar inside output */
+.output-block::-webkit-scrollbar {
+  width: 6px;
+}
+.output-block::-webkit-scrollbar-thumb {
+  background-color: #2196F3;
+  border-radius: 10px;
+}
+.output-block::-webkit-scrollbar-track {
+  background-color: #111;
+}
+
+/* === COPY BUTTON === */
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: #2196F3;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.copy-btn:hover {
+  background: #4dabf7;
+}
+
+/* === FOOTER TOGGLE === */
+.toggle-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+/* === SWITCH === */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #444;
+  transition: .4s;
+  border-radius: 20px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #2196F3;
+}
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+/* === FLOATING BUBBLE === */
+.floating-bubble {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2196F3;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* === ICON === */
+.icon {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 10px;
+}
+.magic-output-container {
+  max-height: 80vh;            /* Allow large area */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+/* === MAGIC OUTPUT CONTAINER === */
+.magic-output-container {
+  max-height: 50vh;             /* Limits total container height */
+  overflow-y: auto;             /* Enables vertical scroll */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scroll-behavior: smooth;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Scrollbar for the container */
+.magic-output-container::-webkit-scrollbar {
+  width: 8px;
+}
+.magic-output-container::-webkit-scrollbar-thumb {
+  background-color: #2196F3;
+  border-radius: 10px;
+}
+.magic-output-container::-webkit-scrollbar-track {
+  background-color: #111;
+}
+
+/* === INDIVIDUAL OUTPUT BLOCK === */
+.output-block {
+  background-color: #222;         /* Dark color */
+  color: white;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #666;
+  font-size: 16px;
+  position: relative;
+
+  height: 150px;                  /* Increased height */
+  overflow-y: auto;               /* Scrollable if text overflows */
+  flex-shrink: 0;                 /* Prevent shrinking in scrollable flex parent */
+  box-sizing: border-box;
+}
+
+/* Scrollbar inside each output */
+.output-block::-webkit-scrollbar {
+  width: 6px;
+}
+.output-block::-webkit-scrollbar-thumb {
+  background-color: #2196F3;
+  border-radius: 10px;
+}
+.output-block::-webkit-scrollbar-track {
+  background-color: #111;
+}
+
+/* === COPY BUTTON === */
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: #2196F3;           /* Blue background */
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.copy-btn:hover {
+  background: #4dabf7;
+}
+
+.magic-output-container{
+  min-height: 60vh;
+}
+.popup-container{
+  padding-bottom: 30px;
+}
